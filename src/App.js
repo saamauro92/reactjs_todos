@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
 
-      <h2> Basic To do with React Js</h2>
+      <h1> Basic To do's list with React Js</h1>
       <Form />
 
     </div>

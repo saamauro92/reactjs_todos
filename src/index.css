@@ -1,13 +1,71 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  background-color: cadetblue;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+form {
+  text-align: center;
+  width: 100%;
+}
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: rgb(226, 224, 120);
+}
+
+input {
+  margin-right: 0;
+  padding: 10px;
+  border: none;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  padding: 10px;
+  margin-left: 0;
+  background: #d9d9d9;
+  color: #555;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+button:hover {
+  background: #bbb;
+  color: #fff;
+}
+
+button:nth-child(1) {
+  float: right;
+  padding: 2px;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 20px 12px 20px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 14px;
+  transition: 0.2s;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+ul li:nth-child(odd) {
+  background: #b2bec3;
+}
+
+ul li:hover {
+  background: #ddd;
 }
