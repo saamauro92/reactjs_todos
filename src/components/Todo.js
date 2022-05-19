@@ -27,13 +27,16 @@ const Todo = ({ todos, removeTodo, completeTodo, updateTodo }) => {
         <>
             {todos && todos.map((todo, indx) =>
                 <div key={indx}
-                    className={todo.isComplete ? 'row-complete' : 'todo-row'}>
+                    className={todo.isComplete ? 'todo-row row-complete' : 'todo-row'}>
 
                     <div key={todo.id} onClick={() => completeTodo(todo.id)}>{todo.todo}  </div>
 
-                    <button onClick={() => removeTodo(todo.id)}>  Delete</button>
+                    <div className="row-controls">
+                        <button onClick={() => setEdit({ id: todo.id, value: todo.todo })}>  Edit</button>
+                        <button onClick={() => removeTodo(todo.id)}>  Delete</button>
+                    </div>
 
-                    <button onClick={() => setEdit({ id: todo.id, value: todo.todo })}>  Edit</button>
+
 
 
                 </div>

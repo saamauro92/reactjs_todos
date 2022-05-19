@@ -2,9 +2,24 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: #f2f2f2;
+}
+
+.App {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background-color: cadetblue;
+  text-align: center;
+}
+
+.Container {
+  background: #5e72bf;
+  min-width: 1000px;
+  min-height: 600px;
+  padding: 20px;
+  margin: 0 auto;
+  height: auto;
+  border-radius: 5px;
 }
 
 form {
@@ -15,68 +30,33 @@ h1 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   letter-spacing: 2px;
   margin-bottom: 15px;
-  color: rgb(226, 224, 120);
+  color: #5e72bf;
 }
 
-input {
-  margin-right: 0;
-  padding: 10px;
+.input {
   border: none;
-  font-size: 14px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%;
 }
 
-button {
+.add-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid rgb(255, 255, 255);
+  color: #000;
+  font-weight: bolder;
+  margin: 5px;
+}
+
+.todo-row {
+  margin: 5px;
+  background: rgb(226, 226, 226);
+  display: flex;
   padding: 10px;
-  margin-left: 0;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.row-complete {
   background: darkcyan;
-  color: #555;
-  text-align: center;
-  font-size: 14px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  float: right;
-}
-button:hover {
-  background: #bbb;
-  color: #fff;
-}
-
-.button-disabled {
-  background-color: grey;
-  float: right;
-}
-
-.button-disabled:hover {
-  background-color: grey;
-  color: #555;
-}
-
-button:nth-child(1) {
-  float: right;
-  padding: 2px;
-}
-
-ul li {
-  cursor: pointer;
-  position: relative;
-  padding: 12px 20px 12px 20px;
-  list-style-type: none;
-  background: #eee;
-  font-size: 14px;
-  transition: 0.2s;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-ul li:nth-child(odd) {
-  background: #b2bec3;
-}
-
-ul li:hover {
-  background: #ddd;
 }

@@ -5,6 +5,7 @@ const Form = (props) => {
 
     const [input, setInput] = useState(props.edit ? props.edit.value : '');
 
+
     const inputFocus = useRef(null);
 
     useEffect(() => {
@@ -25,6 +26,7 @@ const Form = (props) => {
     }
 
 
+
     return (
 
         <form onSubmit={handleSubmit}>
@@ -32,11 +34,14 @@ const Form = (props) => {
             <>
                 {props.edit ? (
                     <>
+                        <div className="todo-row">
 
-                        <input type="input" value={input} onChange={onChangeInput}
-                            ref={inputFocus}
-                        />
-                        <button type="submit" className={input ? "" : "button-disabled"} disabled={!input}>Update </button>
+
+                            <input type="input" value={input} onChange={onChangeInput}
+                                ref={inputFocus}
+                            />
+                            <button type="submit" className={input ? "" : "button-disabled"} disabled={!input}>Update </button>
+                        </div>
                     </>
                 )
 
@@ -45,7 +50,7 @@ const Form = (props) => {
                         <input type="input" value={input} onChange={onChangeInput}
                             ref={inputFocus}
                         />
-                        <button type="submit" className={input ? "" : "button-disabled"} disabled={!input}>Add To do </button>
+                        <button type="submit" className={input ? "add-button " : "add-button button-disabled"} disabled={!input}>  + </button>
                     </>
                 }
 
