@@ -34,7 +34,7 @@ const Form = () => {
         <>
             <form onSubmit={handleSubmit}>
                 <input type="input" value={input} onChange={onChangeInput} />
-                <button type="submit">Add To do </button>
+                <button type="submit" className={input ? "" : "button-disabled"} disabled={!input}>Add To do </button>
             </form>
 
 

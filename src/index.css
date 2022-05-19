@@ -29,7 +29,7 @@ input {
 button {
   padding: 10px;
   margin-left: 0;
-  background: #d9d9d9;
+  background: darkcyan;
   color: #555;
   text-align: center;
   font-size: 14px;
@@ -41,6 +41,15 @@ button {
 button:hover {
   background: #bbb;
   color: #fff;
+}
+
+.button-disabled {
+  background-color: grey;
+}
+
+.button-disabled:hover {
+  background-color: grey;
+  color: #555;
 }
 
 button:nth-child(1) {
