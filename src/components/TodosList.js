@@ -15,9 +15,6 @@ const TodosList = () => {
         setTodos(newTodoArry);
     }
 
-
-
-
     const updateTodo = (todoId, newValue) => {
 
         if (!newValue.todo || /^\s*$/.test(newValue.todo)) {
@@ -33,23 +30,21 @@ const TodosList = () => {
     }
 
 
+
     const completeTodo = id => {
         let updatedTodos = todos.map(todo => {
             if (todo.id === id) {
-                todo.isComplete = !todo.isComplete
+                todo.isComplete = !todo.isComplete;
             }
             return todo;
-        })
-        setTodos(updatedTodos)
-    }
-
+        });
+        setTodos(updatedTodos);
+    };
 
 
     return (
         <>
-
             <Form onSubmit={addToDo} />
-
             <Todo todos={todos} removeTodo={removeTodo} updateTodo={updateTodo} completeTodo={completeTodo} />
 
         </>
