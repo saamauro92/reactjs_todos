@@ -37,6 +37,7 @@ button {
   transition: 0.3s;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
+  float: right;
 }
 button:hover {
   background: #bbb;
@@ -45,6 +46,7 @@ button:hover {
 
 .button-disabled {
   background-color: grey;
+  float: right;
 }
 
 .button-disabled:hover {

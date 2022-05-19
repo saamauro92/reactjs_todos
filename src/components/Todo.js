@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Form from './Form';
 
 
 
@@ -18,9 +19,9 @@ const Todo = ({ todos, removeTodo, completeTodo, updateTodo }) => {
         })
     }
 
-    /*     if (edit.id) {
-            return <Form edit={edit} onSubmit={submitUpdate} />
-        } */
+    if (edit.id) {
+        return <Form edit={edit} onSubmit={submitUpdate} />
+    }
 
     return (
         <>
@@ -33,7 +34,7 @@ const Todo = ({ todos, removeTodo, completeTodo, updateTodo }) => {
                         <button onClick={() => removeTodo(todo.id)}>  Delete</button>
 
 
-                        <button onClick={() => setEdit({ id: todo.id, value: todo.text })}>  Edit</button>
+                        <button onClick={() => setEdit({ id: todo.id, value: todo.todo })}>  Edit</button>
                     </li>
                 </ul>
 

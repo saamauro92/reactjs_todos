@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 
 const Form = (props) => {
 
-    const [input, setInput] = useState("");
+    const [input, setInput] = useState(props.edit ? props.edit.value : '');
+
+    const inputFocus = useRef(null);
+
+    useEffect(() => {
+        inputFocus.current.focus()
+    })
 
     const onChangeInput = (e) => {
         setInput(e.target.value);
@@ -19,20 +25,34 @@ const Form = (props) => {
     }
 
 
-
-
-
     return (
-        <>
-            <form onSubmit={handleSubmit}>
-                <input type="input" value={input} onChange={onChangeInput} />
-                <button type="submit" className={input ? "" : "button-disabled"} disabled={!input}>Add To do </button>
-            </form>
+
+        <form onSubmit={handleSubmit}>
+
+            <>
+                {props.edit ? (
+                    <>
+
+                        <input type="input" value={input} onChange={onChangeInput}
+                            ref={inputFocus}
+                        />
+                        <button type="submit" className={input ? "" : "button-disabled"} disabled={!input}>Update </button>
+                    </>
+                )
+
+                    :
+                    <>
+                        <input type="input" value={input} onChange={onChangeInput}
+                            ref={inputFocus}
+                        />
+                        <button type="submit" className={input ? "" : "button-disabled"} disabled={!input}>Add To do </button>
+                    </>
+                }
+
+            </>
+        </form>
 
 
-
-
-        </>
     )
 }
 

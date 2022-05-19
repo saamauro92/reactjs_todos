@@ -20,7 +20,7 @@ const TodosList = () => {
 
     const updateTodo = (todoId, newValue) => {
 
-        if (!newValue.text || /^\s*$/.test(newValue.text)) {
+        if (!newValue.todo || /^\s*$/.test(newValue.todo)) {
             return;
         }
 
@@ -50,7 +50,7 @@ const TodosList = () => {
 
             <Form onSubmit={addToDo} />
 
-            <Todo todos={todos} removeTodo={removeTodo} />
+            <Todo todos={todos} removeTodo={removeTodo} updateTodo={updateTodo} completeTodo={completeTodo} />
 
         </>
 
