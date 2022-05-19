@@ -26,8 +26,7 @@ const Todo = ({ todos, removeTodo, completeTodo, updateTodo }) => {
     return (
         <>
             {todos && todos.map((todo, indx) =>
-                <div key={indx}
-                    className={todo.isComplete ? 'todo-row row-complete' : 'todo-row'}>
+                <div key={indx} className={todo.isComplete ? 'todo-row row-complete' : 'todo-row'}>
 
                     <div key={todo.id} onClick={() => completeTodo(todo.id)}>{todo.todo}  </div>
 

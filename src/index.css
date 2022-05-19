@@ -3,6 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background: #f2f2f2;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .App {
@@ -13,8 +14,8 @@ body {
 }
 
 .Container {
-  background: #5e72bf;
-  min-width: 1000px;
+  background: #266f89;
+  min-width: 400px;
   min-height: 600px;
   padding: 20px;
   margin: 0 auto;
@@ -27,15 +28,17 @@ form {
   width: 100%;
 }
 h1 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   letter-spacing: 2px;
   margin-bottom: 15px;
-  color: #5e72bf;
+  color: #266f89;
 }
 
-.input {
+input {
   border: none;
-  width: 100%;
+  border-radius: 5px;
+  height: 30px;
+  width: 60%;
+  padding: 5px;
 }
 
 .add-button {
@@ -55,8 +58,10 @@ h1 {
   padding: 10px;
   cursor: pointer;
   justify-content: space-between;
+  color: rgb(58, 57, 57);
 }
 
 .row-complete {
-  background: darkcyan;
+  background: #3ec483;
+  color: white;
 }
