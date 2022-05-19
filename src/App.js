@@ -1,14 +1,10 @@
-import Form from './components/Form';
-
+import TodosList from "./components/TodosList";
 
 function App() {
-
-
   return (
     <div className="App">
 
-      <h1> Basic To do's list with React Js</h1>
-      <Form />
+      <TodosList />
 
     </div>
   );

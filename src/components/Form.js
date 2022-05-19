@@ -1,34 +1,26 @@
 import { useState } from "react";
-import List from "./List";
 
-const Form = () => {
+
+const Form = (props) => {
 
     const [input, setInput] = useState("");
-    const [todos, setTodos] = useState([]);
-
-    const addToDo = todo => {
-        const newTodoArry = [...todos, todo]
-
-        setTodos(newTodoArry);
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (input.length < 1) { return; }
-        addToDo({ id: Math.floor(Math.random() * 100000), todo: input });
-
-        setInput("");
-    }
 
     const onChangeInput = (e) => {
         setInput(e.target.value);
     }
 
 
-    const removeTodo = (id) => {
-        const newArr = [...todos].filter(todo => todo.id !== id)
-        setTodos(newArr);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (input.length < 1) { return; }
+        props.onSubmit({ id: Math.floor(Math.random() * 100000), todo: input });
+
+        setInput("");
     }
+
+
+
+
 
     return (
         <>
@@ -39,7 +31,7 @@ const Form = () => {
 
 
 
-            <List todos={todos} removeTodo={removeTodo} />
+
         </>
     )
 }
