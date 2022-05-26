@@ -5,7 +5,7 @@ function App() {
     <div className="App">
 
       <h1> To do's List - React JS</h1>
-      <p> Click once completed!</p>
+      <p> Click text once completed!</p>
       <div className="Container">
 
         <TodosList />
