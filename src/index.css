@@ -16,7 +16,7 @@ body {
 .Container {
   background: #266f89;
   min-width: 400px;
-  min-height: 600px;
+  min-height: 400px;
   padding: 20px;
   margin: 0 auto;
   height: auto;
